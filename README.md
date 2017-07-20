@@ -13,4 +13,4 @@ You should follow several simple steps to intall this plugin:
 * Turn on/off slider autoplay
 
 ## Developer Settings
-* querySelector — containes a css selector which defines the Camera Slider main container.
+* querySelector — containes a css selector which defines the Plugin container.
