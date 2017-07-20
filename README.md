@@ -1,5 +1,5 @@
 # novi-plugin-swiper-slider
-Novi Builder Plugin for visual Swiper Slider customization
+Novi Builder Plugin for visual [Swiper Slider](http://idangero.us/swiper/) customization
 
 ## How to Intall
 You should follow several simple steps to intall this plugin:
