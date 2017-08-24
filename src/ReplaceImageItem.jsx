@@ -3,8 +3,6 @@ import * as Utils from "./Utils";
 const React = novi.react.React;
 const Icons = novi.ui.icons;
 const Icon = novi.ui.icon;
-const modal = novi.modal;
-const acceptImages = novi.types.images;
 
 const ReplaceImageItem = {
     trigger: <Icon>{Icons.ICON_BG_IMAGE}</Icon>,
@@ -18,19 +16,11 @@ export default ReplaceImageItem;
 
 
 function onClick(element) {
-    modal.fileUpload({
-        path: novi.media.directory,
-        accept: acceptImages,
-        messages: {
-            submit: "Upload an Image",
-            title: "Upload an image",
-            body: 'Click on "Choose File" to upload your image.'
-        },
-        onSubmitClick: onSubmitClick.bind(this, element)
-    })
+    let ratio = element.offsetWidth / element.offsetHeight;
+    novi.media.choose({onSubmit: onSubmitCrop.bind(this,element), ratio})
 }
 
-function onSubmitClick(element, path) {
+function onSubmitCrop(element, path) {
     let correctPath = path.replace(/['|"]/g, ``);
     let currentSlide = Utils.getCurrentSlideElement(element);
     if (!currentSlide) return;

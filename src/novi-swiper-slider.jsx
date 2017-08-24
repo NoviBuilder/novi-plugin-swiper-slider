@@ -9,9 +9,9 @@ const Plugin = {
     name: "novi-plugin-swiper-slider",
     title: "Novi Swiper Slider",
     description: "Novi Swiper Slider description",
-    version: "1.0.0",
+    version: "1.0.1",
     dependencies: {
-        novi: "0.8.3"
+        novi: "0.8.4"
     },
     defaults: {
         querySelector: '.swiper-container',
