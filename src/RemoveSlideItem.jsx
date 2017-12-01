@@ -2,12 +2,12 @@ import * as Utils from "./Utils";
 const React = novi.react.React;
 const Icons = novi.ui.icons;
 const Icon = novi.ui.icon;
-
+const messages = novi.language.getDataByKey("novi-plugin-swiper-slider");
 const RemoveSlideItem = {
     trigger: <Icon>{Icons.ICON_MINUS_SQUARE}</Icon>,
-    tooltip: "Remove Slide",
+    tooltip: messages.editor.removeSlide.tooltip,
     closeIcon: "submit",
-    title: "Remove Active Slide",
+    title: messages.editor.removeSlide.title,
     collapsed: true,
     onTriggerClick: removeSlide
 };

@@ -3,7 +3,7 @@ const Component = novi.react.Component;
 const Input = novi.ui.input;
 const Select = novi.ui.select;
 const Button = novi.ui.button;
-
+const Language = novi.language;
 export default class Settings extends Component {
     constructor(props) {
         super();
@@ -21,7 +21,8 @@ export default class Settings extends Component {
             {label: "Cube", value: "cube"},
             {label: "Coverflow", value: "coverflow"},
             {label: "Flip", value: "flip"},
-        ]
+        ];
+        this.messages = Language.getdataByKey("novi-plugin-swiper-slider");
     }
 
     componentWillReceiveProps(props){
@@ -35,14 +36,14 @@ export default class Settings extends Component {
         return (
             <div>
                 <span style={{letterSpacing: "0,0462em"}}>Swiper Slider Plugin</span>
-                <div style={{fontSize: 13, color: "#6E778A", marginTop: 21}}>Apply this plugin to elements which are matching selector:</div>
+                <div style={{fontSize: 13, color: "#6E778A", marginTop: 21}}>{this.messages.settings.pluginElement}</div>
                     <Input style={{marginTop: 10, width: 340}} value={this.state.querySelector} onChange={this.onChange}/>
                 <div style={{marginTop: 30, width: 340}}>
-                    <div style={{fontSize: 13, color: "#6E778A", marginTop: 21}}>Available transition effects:</div>
+                    <div style={{fontSize: 13, color: "#6E778A", marginTop: 21}}>{this.messages.settings.effects}</div>
                     <Select multi={true} searchable={false} style={{marginTop: 10}} options={this.effects} value={this.state.effects} onChange={this.onEffectChange}/>
                 </div>
                 <div style={{marginTop: 30}}>
-                <Button type="primary"  messages={{textContent: "Save Settings"}} onClick={this.saveSettings} />
+                <Button type="primary"  messages={{textContent: this.messages.settings.submitButton}} onClick={this.saveSettings} />
                 </div>
             </div>
         );

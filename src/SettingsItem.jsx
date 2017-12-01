@@ -4,6 +4,7 @@ const React = novi.react.React;
 const Icons = novi.ui.icons;
 const Icon = novi.ui.icon;
 const lodash = novi.utils.lodash;
+const messages = novi.language.getDataByKey("novi-plugin-swiper-slider");
 let icon = <Icon>
     <svg viewBox="0 0 27 16" style={{height: 28, width: 28, maxWidth: "inherit", maxHeight: "inherit"}}>
         <path
@@ -27,9 +28,9 @@ let icon = <Icon>
 
 const SettingsItem = {
     trigger: icon,
-    tooltip: "Slider Settings",
-    title: "Slider Settings",
-    header: [icon, <span>Swiper Slider Settings</span>],
+    tooltip: messages.editor.settings.tooltip,
+    title: messages.editor.settings.title,
+    header: [icon, <span>{messages.editor.settings.header}</span>],
     body: [<SettingsBody />],
     closeIcon: "submit",
     onSubmit: onSubmitAction,

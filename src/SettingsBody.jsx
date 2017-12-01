@@ -4,7 +4,7 @@ const Component = novi.react.Component;
 const Switcher = novi.ui.switcher;
 const Select = novi.ui.select;
 const lodash = novi.utils.lodash;
-
+const Language = novi.language;
 export default class Body extends Component {
     constructor(props) {
         super(props);
@@ -56,6 +56,7 @@ export default class Body extends Component {
         this._handleAutoplayChange = this._handleAutoplayChange.bind(this);
         this._handleSwitcherChange = this._handleSwitcherChange.bind(this);
         this._handleTransitionEffectChange = this._handleTransitionEffectChange.bind(this);
+        this.messages = Language.getDataByKey("novi-plugin-swiper-slider");
     }
 
     render() {
@@ -72,20 +73,21 @@ export default class Body extends Component {
             >
                 <style>{this.style}</style>
                 <p className="novi-label" style={{"marginTop": "0"}}>
-                    Slider transition effect:
+                    {this.messages.editor.settings.body.effect}
                 </p>
                 <Select searchable={false} options={this.effects} value={this.state.transitionEffect} onChange={this._handleTransitionEffectChange}/>
 
                 <div className="swiper-switcher">
                     <p className="novi-label" style={{"margin": 0}}>
-                        Enable autoplay(in Preview Mode)
+                        {this.messages.editor.settings.body.autoPlay}
+
                     </p>
                     <Switcher isActive={this.state.autoplay} onChange={this._handleSwitcherChange}/>
                 </div>
 
                 <div className="swiper-switcher">
                     <p className="novi-label" style={{"margin": 0}}>
-                        Slider Autoplay Delay, seconds
+                        {this.messages.editor.settings.body.autoPlayDelay}
                     </p>
                     <Input disabled={!this.state.autoplay} onChange={this._handleAutoplayChange} value={this.state.autoplayTime}/>
                 </div>

@@ -4,12 +4,12 @@ const React = novi.react.React;
 const Icons = novi.ui.icons;
 const Icon = novi.ui.icon;
 const Types = novi.types;
-
+const messages = novi.language.getDataByKey("novi-plugin-swiper-slider");
 const ReplaceImageItem = {
     trigger: <Icon>{Icons.ICON_BG_IMAGE}</Icon>,
-    tooltip: "Replace Slide Image",
+    tooltip: messages.editor.imageReplace.tooltip,
     closeIcon: "submit",
-    title: "Replace Slide Image",
+    title: messages.editor.imageReplace.title,
     onTriggerClick: onClick
 };
 

@@ -2,12 +2,12 @@ import * as Utils from "./Utils";
 const React = novi.react.React;
 const Icons = novi.ui.icons;
 const Icon = novi.ui.icon;
-
+const messages = novi.language.getDataByKey("novi-plugin-swiper-slider");
 const AddSlideItem = {
     trigger: <Icon>{Icons.ICON_PLUS_SQUARE}</Icon>,
-    tooltip: "Add Slide",
+    tooltip: messages.editor.addSlide.tooltip,
     closeIcon: "submit",
-    title: "Add New Slide",
+    title: messages.editor.addSlide.title,
     collapsed: true,
     onTriggerClick: addSlide
 };
