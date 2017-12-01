@@ -1,11 +1,11 @@
 {
-  "name": "@eugeneford/novi-plugin-swiper-slider",
+  "name": "@novi_dev/novi-plugin-swiper-slider",
   "version": "1.0.2",
   "description": "Novi swiper slider plugin",
   "main": "dist/novi-plugin-swiper-slider.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/eugeneford/novi-plugin-swiper-slider.git"
+    "url": "https://github.com/NoviBuilder/novi-plugin-swiper-slider.git"
   },
   "scripts": {
     "webpack": "webpack",
@@ -19,7 +19,7 @@
   "files": [
     "dist"
   ],
-  "author": "Eugene Ford",
+  "author": "Novi Builder",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.18.0",

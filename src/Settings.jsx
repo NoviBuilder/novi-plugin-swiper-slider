@@ -22,7 +22,7 @@ export default class Settings extends Component {
             {label: "Coverflow", value: "coverflow"},
             {label: "Flip", value: "flip"},
         ];
-        this.messages = Language.getdataByKey("novi-plugin-swiper-slider");
+        this.messages = Language.getDataByKey("novi-plugin-swiper-slider");
     }
 
     componentWillReceiveProps(props){
