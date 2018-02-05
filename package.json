@@ -1,6 +1,6 @@
 {
   "name": "@novi_dev/novi-plugin-swiper-slider",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Novi swiper slider plugin",
   "main": "dist/novi-plugin-swiper-slider.js",
   "repository": {
