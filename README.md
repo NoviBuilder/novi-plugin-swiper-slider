@@ -57,7 +57,7 @@ Initialize Swiper in JS by adding following block code:
 
 $document.ready(function () {
     var isNoviBuilder = window.xMode;
-    var swiper = $(".swiper-slider");
+    var swiper = $(".swiper-container");
 
     /**
      * getSwiperHeight
@@ -92,7 +92,7 @@ $document.ready(function () {
      * @description  Enable Swiper Slider
      */
     if (swiper.length) {
-      var i;
+      var i, j;
       for (i = 0; i < swiper.length; i++) {
         var s = $(swiper[i]);
         var pag = s.find(".swiper-pagination"),

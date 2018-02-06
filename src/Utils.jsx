@@ -25,11 +25,12 @@ export function getCurrentSlideIndex(element){
     if (!tmpCurrent) return null;
 
     let childNodes = tmpCurrent.parentNode.childNodes;
+    let elementCounter = 0;
     for (let i = 0; i < childNodes.length; i++){
         if (childNodes[i] === tmpCurrent) {
-            return i;
-            break;
+            return elementCounter;
         }
+        if (childNodes[i].nodeType === 1) elementCounter++;
     }
 
     return null;
