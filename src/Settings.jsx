@@ -17,10 +17,7 @@ export default class Settings extends Component {
 
         this.effects = [
             {label: "Slide", value: "slide", clearableValue: false},
-            {label: "Fade", value: "fade", clearableValue: false},
-            {label: "Cube", value: "cube"},
-            {label: "Coverflow", value: "coverflow"},
-            {label: "Flip", value: "flip"},
+            {label: "Fade", value: "fade", clearableValue: false}
         ];
         this.messages = Language.getDataByKey("novi-plugin-swiper-slider");
     }
