@@ -22,7 +22,7 @@ function removeSlide(element) {
     let slidesCount = Utils.getSlidesCount(element);
     if (!currentSlide || slidesCount <= 1) return;
 
-    // When remove a slide, the next slide doesn't display the content because the animation ddoesn't work
+    // When remove a slide, the next slide doesn't display the content because the animation doesn't work
     Utils.removeAnimationWhenRemoveSlide(element, 
         currentSlideIndex != slidesCount -1 ? currentSlideIndex+1 : currentSlideIndex-1);
 
