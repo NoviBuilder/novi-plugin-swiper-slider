@@ -20,6 +20,19 @@ export function getSlidesCount(element){
     return slideCounter;
 }
 
+export function removeAnimationWhenRemoveSlide(element, currentSlideIndex){
+    let tmpCurrent = element.querySelectorAll(".swiper-slide");
+    if (!tmpCurrent) return null;
+
+    let nextSlide = tmpCurrent[currentSlideIndex];
+    const elementsWithNotAnimated = nextSlide.querySelectorAll(".not-animated");
+    if (elementsWithNotAnimated.length > 0) {
+        for (const child of elementsWithNotAnimated) {
+            child.classList.remove("not-animated");
+        }
+    }
+}
+
 export function getCurrentSlideIndex(element){
     let tmpCurrent = element.querySelector(".swiper-slide.swiper-slide-active");
     if (!tmpCurrent) return null;
