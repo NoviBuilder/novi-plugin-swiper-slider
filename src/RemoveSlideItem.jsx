@@ -22,6 +22,11 @@ function removeSlide(element) {
     let slidesCount = Utils.getSlidesCount(element);
     if (!currentSlide || slidesCount <= 1) return;
 
+    // When remove a slide, the next slide doesn't display the content because the animation ddoesn't work
+    Bug animation when slide is removed
+    Utils.removeAnimationWhenRemoveSlide(element, 
+        currentSlideIndex != slidesCount -1 ? currentSlideIndex+1 : currentSlideIndex-1);
+
     let swiper = element.swiper;
     swiper.removeSlide(currentSlideIndex);
     novi.element.removeStatic(staticCurrentSlide);
